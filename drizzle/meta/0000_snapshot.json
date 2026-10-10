@@ -1,0 +1,353 @@
+{
+  "id": "cecd72d7-d0eb-4d5b-a72b-53b292c71257",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.bilibili_up_info": {
+      "name": "bilibili_up_info",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nickname": {
+          "name": "nickname",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sex": {
+          "name": "sex",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sign": {
+          "name": "sign",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avatar": {
+          "name": "avatar",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "add_ts": {
+          "name": "add_ts",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_modify_ts": {
+          "name": "last_modify_ts",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_fans": {
+          "name": "total_fans",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_liked": {
+          "name": "total_liked",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_rank": {
+          "name": "user_rank",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_official": {
+          "name": "is_official",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.bilibili_video": {
+      "name": "bilibili_video",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nickname": {
+          "name": "nickname",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avatar": {
+          "name": "avatar",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "add_ts": {
+          "name": "add_ts",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_modify_ts": {
+          "name": "last_modify_ts",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "video_id": {
+          "name": "video_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "video_type": {
+          "name": "video_type",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar(500)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "desc": {
+          "name": "desc",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "create_time": {
+          "name": "create_time",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "liked_count": {
+          "name": "liked_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "disliked_count": {
+          "name": "disliked_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_play_count": {
+          "name": "video_play_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_favorite_count": {
+          "name": "video_favorite_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_share_count": {
+          "name": "video_share_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_coin_count": {
+          "name": "video_coin_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_danmaku": {
+          "name": "video_danmaku",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_comment": {
+          "name": "video_comment",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_url": {
+          "name": "video_url",
+          "type": "varchar(512)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_cover_url": {
+          "name": "video_cover_url",
+          "type": "varchar(512)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "source_keyword": {
+          "name": "source_keyword",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.bilibili_video_comment": {
+      "name": "bilibili_video_comment",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nickname": {
+          "name": "nickname",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sex": {
+          "name": "sex",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sign": {
+          "name": "sign",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avatar": {
+          "name": "avatar",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "add_ts": {
+          "name": "add_ts",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_modify_ts": {
+          "name": "last_modify_ts",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "comment_id": {
+          "name": "comment_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "video_id": {
+          "name": "video_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "content": {
+          "name": "content",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "create_time": {
+          "name": "create_time",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sub_comment_count": {
+          "name": "sub_comment_count",
+          "type": "varchar(16)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "parent_comment_id": {
+          "name": "parent_comment_id",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "like_count": {
+          "name": "like_count",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'0'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

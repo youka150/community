@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <!-- 深色发光滤镜 -->
+    <filter id="glow-dark" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- 深色渐变定义 -->
+    <linearGradient id="eye-grad-dark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" /> <!-- 亮青 -->
+      <stop offset="100%" stop-color="#818CF8" /> <!-- 亮紫 -->
+    </linearGradient>
+    <linearGradient id="star-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" /> <!-- 粉红 -->
+      <stop offset="100%" stop-color="#C084FC" /> <!-- 亮紫 -->
+    </linearGradient>
+    <linearGradient id="trend-grad-dark" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#34D399" stop-opacity="1" />
+      <stop offset="100%" stop-color="#6EE7B7" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 将整体图案移至 256x256 画布中心 -->
+  <g transform="translate(128, 128)">
+    
+    <!-- 1. 洞察之眼 (外部轮廓) -->
+    <path d="M -100 0 C -45 -70 45 -70 100 0 C 45 70 -45 70 -100 0 Z" 
+          fill="none" stroke="url(#eye-grad-dark)" stroke-width="8" 
+          stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-dark)"/>
+    
+    <!-- 内层聚焦圈 -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="2" stroke-dasharray="4 4" />
+
+    <!-- 2. 网络节点 (社区关系) -->
+    <g stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.5">
+      <line x1="0" y1="0" x2="-40" y2="-25" />
+      <line x1="0" y1="0" x2="-30" y2="30" />
+      <line x1="0" y1="0" x2="40" y2="-15" />
+      <line x1="0" y1="0" x2="25" y2="35" />
+      <line x1="-40" y1="-25" x2="-30" y2="30" />
+      <line x1="-40" y1="-25" x2="40" y2="-15" />
+      <line x1="40" y1="-15" x2="25" y2="35" />
+    </g>
+    
+    <circle cx="-40" cy="-25" r="5" fill="#38BDF8" filter="url(#glow-dark)"/>
+    <circle cx="-30" cy="30" r="4" fill="#818CF8" />
+    <circle cx="40" cy="-15" r="6" fill="#38BDF8" filter="url(#glow-dark)"/>
+    <circle cx="25" cy="35" r="3" fill="#818CF8" />
+
+    <!-- 3. AI 中心星芒 (核心 Agent) -->
+    <path d="M 0 -24 Q 0 0 24 0 Q 0 0 0 24 Q 0 0 -24 0 Q 0 0 0 -24 Z" 
+          fill="url(#star-grad-dark)" filter="url(#glow-dark)"/>
+    <circle cx="0" cy="0" r="4.5" fill="#FFFFFF" />
+
+    <!-- 4. 趋势曲线 (Trend Orbit) -->
+    <path d="M -115 35 Q -40 55 15 0 T 115 -45" 
+          fill="none" stroke="url(#trend-grad-dark)" stroke-width="5" 
+          stroke-linecap="round" filter="url(#glow-dark)"/>
+    <circle cx="115" cy="-45" r="4.5" fill="#6EE7B7" filter="url(#glow-dark)"/>
+
+  </g>
+</svg>

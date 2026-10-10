@@ -1,0 +1,94 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Python environments and generated caches
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local editor and AI assistant configuration
+/.agent/
+/.agents/
+/.claude/
+/.codex/
+/.gemini/
+/.antigravitycli/
+/.idea/
+/.vscode/
+
+# Local publishing snapshot and bundled runtimes
+/.publish/
+/win-x64/
+
+# Thesis materials and experiment artifacts
+/markdown/
+*.docx
+*.doc
+*.pdf
+/python/huawei_mining_service/thesis_ch4_*
+/python/huawei_mining_service/evaluation.ipynb
+/python/huawei_mining_service/create_evaluation_notebook.py
+/python/huawei_mining_service/entropy_weights_distribution.svg
+/python/huawei_mining_service/kmeans_*.svg
+/python/huawei_mining_service/lda_topic_selection.*
+
+# Logs, temporary files, local diagnostics and one-off editing scripts
+*.log
+*.tmp
+*.bak
+tmp.txt
+/build_output.txt
+/cols.txt
+/refactor.py
+/script.py
+/test_ascend_users.js
+/src/api/
+/src/app/api-test/
+/start-agents.ps1
+/start-queryengine.ps1

@@ -1,0 +1,16 @@
+fastapi==0.109.0
+uvicorn==0.27.0
+psycopg2-binary==2.9.9
+pandas==2.1.4
+numpy==1.26.3
+scikit-learn==1.4.0
+gensim==4.3.2
+networkx==3.2.1
+python-dotenv==1.0.0
+httpx==0.26.0
+jieba==0.42.1
+sqlalchemy==2.0.25
+sentence-transformers>=2.7.0
+bertopic>=0.16.0
+redis>=5.0.0
+snownlp>=0.12.3
